@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //child: Text(text),
         child: Image.network(text),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: <BottomNavigationBarItem>[
+      bottomNavigationBar: BottomNavigationBar(items:const <BottomNavigationBarItem>[
         BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.store ), label: 'Store')
       ],
