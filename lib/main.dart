@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         //child: Text(text),
-        child: Image.network(text),
+        child: Image.network(text,cacheWidth: 450,cacheHeight:750,),
       ),
       bottomNavigationBar: BottomNavigationBar(items:const <BottomNavigationBarItem>[
         BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
