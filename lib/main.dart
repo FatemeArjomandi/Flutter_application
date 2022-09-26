@@ -111,6 +111,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add_a_photo),
       ), // This Fateme trailing comma makes auto-formatting nicer for build methods.
     );
+
     //git merge
+
+    // git merge b master
+
   }
 }
