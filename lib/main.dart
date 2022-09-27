@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.brown,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -49,21 +49,23 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String text = "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80";
+  String text =
+      "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png";
   int index = 0;
-  String test2 = 'https://images.unsplash.com/photo-1482482097755-0b595893ba63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3088&q=80';
-  void onTapNavigation(index){
+  String test2 =
+      'https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png';
+  void onTapNavigation(index) {
     setState(() {
-      switch(index){
+      switch (index) {
         case 0:
-        text = 'https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80';
-        this.index = 0; 
-        break;
+          text =
+              'https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png';
+          this.index = 0;
+          break;
         case 1:
-        text = test2;
-        this.index = 1;
-        break;
-        
+          text = test2;
+          this.index = 1;
+          break;
       }
     });
   }
@@ -88,23 +90,33 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(35, 32, 32, 32),
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        backgroundColor: const Color.fromARGB(223, 99, 91, 91),
+        elevation: 1.5,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         //child: Text(text),
-        child: Image.network(text,cacheWidth: 450,cacheHeight:750,),
+        child: Image.network(
+          text,
+          cacheWidth: 450,
+          cacheHeight: 750,
+        ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items:const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.store ), label: 'Store')
-      ],
-      currentIndex: index,
-      onTap: onTapNavigation ,),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(223, 99, 91, 91),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.store), label: 'Store')
+        ],
+        currentIndex: index,
+        onTap: onTapNavigation,
+      ),
     );
   }
 }
