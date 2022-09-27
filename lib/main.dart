@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -49,21 +50,30 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String text =
-      "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png";
+  Image test = Image.asset(
+    'assets/majid.jpeg',
+    width: 550,
+    height: 1000,
+  );
   int index = 0;
-  String test2 =
-      'https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png';
+  Image test2 = Image.asset(
+    'assets/fateme.jpeg',
+    width: 550,
+    height: 950,
+  );
   void onTapNavigation(index) {
     setState(() {
       switch (index) {
         case 0:
-          text =
-              'https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png';
+          test =  Image.asset(
+    'assets/majid.jpeg',
+    width: 550,
+    height: 1000,
+  );;
           this.index = 0;
           break;
         case 1:
-          text = test2;
+          test = test2;
           this.index = 1;
           break;
       }
@@ -99,14 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 1.5,
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        //child: Text(text),
-        child: Image.network(
-          text,
-          cacheWidth: 450,
-          cacheHeight: 750,
-        ),
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          //child: Text(text),
+          child: test,
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(223, 99, 91, 91),
